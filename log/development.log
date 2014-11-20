@@ -2308,3 +2308,884 @@ Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:38:32 -0800
 Processing by Api::FeedsController#index as JSON
   [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds"
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 52ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:48:36 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/feeds/2" for 127.0.0.1 at 2014-11-20 14:53:36 -0800
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mFeed Load (1.9ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2014-11-20 22:53:36.277769' WHERE "feeds"."id" = 2[0m
+  [1m[35m (1.0ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1650547"], ["json", "{\"title\":\"Google Launches Contributor To Reinvent the Way We Fund the Web\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/40af2bc1/sc/4/l/0L0Swired0N0C20A140C110Cgoogle0Econtributor0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2014/11/contributor-ft-660x330.jpg\\\" alt=\\\"Google Launches Contributor To Reinvent the Way We Fund the Web\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Google Contributor asks people to pay a tiny amount to support the websites they love. But will it work?\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2014/11/google-contributor/\\\"\\u0026gt;Google Launches Contributor To Reinvent the Way We Fund the Web\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/40af2bc1/sc/4/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/211597825891/u/0/f/661370/c/35185/s/40af2bc1/sc/4/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"comments\":\"http://www.wired.com/2014/11/google-contributor/#comments\",\"pubDate\":\"2014-11-20T13:31:16-08:00\",\"category\":\"Google Contributor\",\"guid\":\"http://www.wired.com/?p=1650547\",\"dc_creator\":\"Issie Lapowsky\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/40af2bc1/sc/4/l/0L0Swired0N0C20A140C110Cgoogle0Econtributor0C/story01.htm"], ["published_at", Thu, 20 Nov 2014 21:31:16 UTC +00:00], ["title", "Google Launches Contributor To Reinvent the Way We Fund the Web"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1646893"], ["json", "{\"title\":\"This 200-MPH Electric Hyperbike Is Coming to American Streets\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/40af020e/sc/10/l/0L0Swired0N0C20A140C110Clightning0Emotorcycles0Els0E2180C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2014/11/hyperbike-ft-660x330.jpg\\\" alt=\\\"This 200-MPH Electric Hyperbike Is Coming to American Streets\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Last year, a man named Carlin Dunne raced an electric motorcycle in the Pikes Peak International Hillclimb. He reached the summit in a blistering 10 minutes flat, handily beating his closest competitor through the mountain's 156 curves by 21 seconds. That kind of time is impressive for a gasoline-powered superbike. It is downright amazing for an electric motorcycle.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2014/11/lightning-motorcycles-ls-218/\\\"\\u0026gt;This 200-MPH Electric Hyperbike Is Coming to American Streets\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/40af020e/sc/10/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/213968710915/u/0/f/661370/c/35185/s/40af020e/sc/10/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"comments\":\"http://www.wired.com/2014/11/lightning-motorcycles-ls-218/#comments\",\"pubDate\":\"2014-11-20T12:45:30-08:00\",\"category\":\"Autopia\",\"guid\":\"http://www.wired.com/?p=1646893\",\"dc_creator\":\"Alexander George\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/40af020e/sc/10/l/0L0Swired0N0C20A140C110Clightning0Emotorcycles0Els0E2180C/story01.htm"], ["published_at", Thu, 20 Nov 2014 20:45:30 UTC +00:00], ["title", "This 200-MPH Electric Hyperbike Is Coming to American Streets"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com?p=1650649&amp;preview_id=1650649"], ["json", "{\"title\":\"What’s Missing from the Industrial Internet of Things Conversation? Software\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/40af1d27/sc/21/l/0L0Swired0N0C20A140C110Cindustrial0Einternet0Eof0Ethings0Esoftware0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2014/08/datapipe_660.jpg\\\" alt=\\\"What’s Missing from the Industrial Internet of Things Conversation? Software\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;These days, you can hardly have a technology conversation without talking about the Internet of Things (IoT). And when that conversation shifts its focus to the industrial sector, including energy, Oil \\u0026amp;#38; Gas, Power \\u0026amp;#38; Utilities, and petrochemicals, among others, the discussion changes to what is being called the \\u0026amp;#8220;Industrial Internet of Things\\u0026amp;#8221; (IIoT). So [\\u0026amp;#8230;]\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2014/11/industrial-internet-of-things-software/\\\"\\u0026gt;What’s Missing from the Industrial Internet of Things Conversation? Software\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/40af1d27/sc/21/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/211597824073/u/0/f/661370/c/35185/s/40af1d27/sc/21/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"comments\":\"http://www.wired.com/2014/11/industrial-internet-of-things-software/#comments\",\"pubDate\":\"2014-11-20T12:14:51-08:00\",\"category\":\"industrial software\",\"guid\":\"http://www.wired.com?p=1650649\\u0026amp;preview_id=1650649\",\"dc_creator\":\"Matt Cicciari, Meridium\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/40af1d27/sc/21/l/0L0Swired0N0C20A140C110Cindustrial0Einternet0Eof0Ethings0Esoftware0C/story01.htm"], ["published_at", Thu, 20 Nov 2014 20:14:51 UTC +00:00], ["title", "What’s Missing from the Industrial Internet of Things Conversation? Software"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1650325"], ["json", "{\"title\":\"This Is What It Sounded Like When We Landed on a Comet\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/40ae8b33/sc/21/l/0L0Swired0N0C20A140C110Csounded0Elike0Elanded0Ecomet0C/story01.htm\",\"description\":\"\\u0026lt;p\\u0026gt;Instruments recorded the thump of Philae’s first of three landings on comet 67P/Churyumov-Gerasimenko last week.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2014/11/sounded-like-landed-comet/\\\"\\u0026gt;This Is What It Sounded Like When We Landed on a Comet\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/40ae8b33/sc/21/mf.gif' border='0'/\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/211597822904/u/0/f/661370/c/35185/s/40ae8b33/sc/21/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\",\"comments\":\"http://www.wired.com/2014/11/sounded-like-landed-comet/#comments\",\"pubDate\":\"2014-11-20T11:30:39-08:00\",\"category\":\"comet\",\"guid\":\"http://www.wired.com/?p=1650325\",\"dc_creator\":\"Marcus Woo\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/40ae8b33/sc/21/l/0L0Swired0N0C20A140C110Csounded0Elike0Elanded0Ecomet0C/story01.htm"], ["published_at", Thu, 20 Nov 2014 19:30:39 UTC +00:00], ["title", "This Is What It Sounded Like When We Landed on a Comet"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (1.7ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 2]]
+Completed 200 OK in 882ms (Views: 868.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2014-11-20 14:53:37 -0800
+Processing by Api::FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2014-11-20 22:53:37.162430' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.6ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416524010"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:53:30+00:00\",\"link\":\"http://example.com/test/1416524010\",\"description\":\"Excepteur ipsum laboris Lorem culpa ullamco incididunt aliquip adipisicing cupidatat.\",\"pubDate\":\"2014-11-20T14:53:30-08:00\",\"guid\":\"http://example.com/test/1416524010\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416524010"], ["published_at", Thu, 20 Nov 2014 22:53:30 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:53:30+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416524000"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:53:20+00:00\",\"link\":\"http://example.com/test/1416524000\",\"description\":\"Pariatur qui adipisicing culpa sunt nisi est labore et aliqua officia.\",\"pubDate\":\"2014-11-20T14:53:20-08:00\",\"guid\":\"http://example.com/test/1416524000\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416524000"], ["published_at", Thu, 20 Nov 2014 22:53:20 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:53:20+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523990"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:53:10+00:00\",\"link\":\"http://example.com/test/1416523990\",\"description\":\"Sit veniam ad officia cillum irure est voluptate occaecat et velit officia proident amet.\",\"pubDate\":\"2014-11-20T14:53:10-08:00\",\"guid\":\"http://example.com/test/1416523990\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523990"], ["published_at", Thu, 20 Nov 2014 22:53:10 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:53:10+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523980"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:53:00+00:00\",\"link\":\"http://example.com/test/1416523980\",\"description\":\"Consequat ad adipisicing ipsum dolor labore enim.\",\"pubDate\":\"2014-11-20T14:53:00-08:00\",\"guid\":\"http://example.com/test/1416523980\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523980"], ["published_at", Thu, 20 Nov 2014 22:53:00 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:53:00+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523970"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:52:50+00:00\",\"link\":\"http://example.com/test/1416523970\",\"description\":\"Lorem exercitation ullamco eiusmod ipsum excepteur fugiat fugiat est.\",\"pubDate\":\"2014-11-20T14:52:50-08:00\",\"guid\":\"http://example.com/test/1416523970\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523970"], ["published_at", Thu, 20 Nov 2014 22:52:50 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:52:50+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523960"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:52:40+00:00\",\"link\":\"http://example.com/test/1416523960\",\"description\":\"Non fugiat consectetur amet dolore consectetur dolor deserunt do aliquip anim.\",\"pubDate\":\"2014-11-20T14:52:40-08:00\",\"guid\":\"http://example.com/test/1416523960\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523960"], ["published_at", Thu, 20 Nov 2014 22:52:40 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:52:40+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523950"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:52:30+00:00\",\"link\":\"http://example.com/test/1416523950\",\"description\":\"Proident consequat aute officia aliqua Lorem Lorem cillum minim cillum in nostrud exercitation ex deserunt.\",\"pubDate\":\"2014-11-20T14:52:30-08:00\",\"guid\":\"http://example.com/test/1416523950\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523950"], ["published_at", Thu, 20 Nov 2014 22:52:30 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:52:30+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523940"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:52:20+00:00\",\"link\":\"http://example.com/test/1416523940\",\"description\":\"Est minim velit sint incididunt cillum tempor id veniam veniam nisi ex.\",\"pubDate\":\"2014-11-20T14:52:20-08:00\",\"guid\":\"http://example.com/test/1416523940\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523940"], ["published_at", Thu, 20 Nov 2014 22:52:20 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:52:20+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523930"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:52:10+00:00\",\"link\":\"http://example.com/test/1416523930\",\"description\":\"Adipisicing mollit pariatur ea quis ipsum deserunt.\",\"pubDate\":\"2014-11-20T14:52:10-08:00\",\"guid\":\"http://example.com/test/1416523930\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523930"], ["published_at", Thu, 20 Nov 2014 22:52:10 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:52:10+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1416523920"], ["json", "{\"title\":\"Lorem ipsum 2014-11-20T22:52:00+00:00\",\"link\":\"http://example.com/test/1416523920\",\"description\":\"Esse veniam minim adipisicing ad incididunt.\",\"pubDate\":\"2014-11-20T14:52:00-08:00\",\"guid\":\"http://example.com/test/1416523920\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1416523920"], ["published_at", Thu, 20 Nov 2014 22:52:00 UTC +00:00], ["title", "Lorem ipsum 2014-11-20T22:52:00+00:00"], ["updated_at", Thu, 20 Nov 2014 22:53:37 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (0.8ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 1]]
+Completed 200 OK in 742ms (Views: 725.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:53:49 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2014-11-20 14:53:59 -0800
+Processing by Api::FeedsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mEntry Load (1.4ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 1]]
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 57ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:57:25 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:57:58 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:57:59 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:18 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 69ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:19 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:20 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:23 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:24 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:27 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:28 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:29 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:30 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:58:51 -0800
+Processing by Api::FeedsController#index as HTML
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/feeds/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/entries/index.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/views/entries/entries_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/views/feeds/feeds_index.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/routers/entries_router.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/routers/router.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 14:59:31 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2014-11-20 15:01:32 -0800
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feeds/3" for 127.0.0.1 at 2014-11-20 15:02:32 -0800
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mSQL (0.8ms)[0m  UPDATE "feeds" SET "updated_at" = '2014-11-20 23:02:32.633493' WHERE "feeds"."id" = 3
+  [1m[36m (0.7ms)[0m  [1mSELECT "entries"."guid" FROM "entries"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/goatsandsoda/2014/11/20/365514156/the-whole-world-is-fat-and-that-ends-up-costing-two-trillion-a-year?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"The Whole World Is Fat! And That Ends Up Costing Two Trillion A Year\",\"link\":\"http://www.npr.org/blogs/goatsandsoda/2014/11/20/365514156/the-whole-world-is-fat-and-that-ends-up-costing-two-trillion-a-year?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Nearly a third of us are overweight, and some of the worst rates of obesity are in the developing world. All this corpulence takes a huge economic toll — two trillion dollars a year.\",\"content_encoded\":\"\\u003Cp\\u003ENearly a third of us are overweight, and some of the worst rates of obesity are in the developing world. All this corpulence takes a huge economic toll — two trillion dollars a year.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365514156\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T14:30:11-08:00\",\"guid\":\"http://www.npr.org/blogs/goatsandsoda/2014/11/20/365514156/the-whole-world-is-fat-and-that-ends-up-costing-two-trillion-a-year?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Jason Beaubien\"}"], ["link", "http://www.npr.org/blogs/goatsandsoda/2014/11/20/365514156/the-whole-world-is-fat-and-that-ends-up-costing-two-trillion-a-year?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 22:30:11 UTC +00:00], ["title", "The Whole World Is Fat! And That Ends Up Costing Two Trillion A Year"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/thetwo-way/2014/11/20/365510846/alabama-settlement-could-be-model-for-handling-poor-defendants-in-ferguson-mo?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Alabama Settlement Could Be Model For Handling Poor Defendants In Ferguson, Mo.\",\"link\":\"http://www.npr.org/blogs/thetwo-way/2014/11/20/365510846/alabama-settlement-could-be-model-for-handling-poor-defendants-in-ferguson-mo?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The city of Montgomery, Ala., was sued by a group of people who said they were jailed when they couldn't pay court fines and fees. Now the city has agreed to take steps to help those too poor to pay.\",\"content_encoded\":\"\\u003Cp\\u003EThe city of Montgomery, Ala., was sued by a group of people who said they were jailed when they couldn't pay court fines and fees. Now the city has agreed to take steps to help those too poor to pay.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365510846\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T14:18:00-08:00\",\"guid\":\"http://www.npr.org/blogs/thetwo-way/2014/11/20/365510846/alabama-settlement-could-be-model-for-handling-poor-defendants-in-ferguson-mo?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Joseph Shapiro\"}"], ["link", "http://www.npr.org/blogs/thetwo-way/2014/11/20/365510846/alabama-settlement-could-be-model-for-handling-poor-defendants-in-ferguson-mo?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 22:18:00 UTC +00:00], ["title", "Alabama Settlement Could Be Model For Handling Poor Defendants In Ferguson, Mo."], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/2014/11/20/365509889/debate-should-physician-assisted-suicide-be-legal?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Debate: Should Physician-Assisted Suicide Be Legal?\",\"link\":\"http://www.npr.org/2014/11/20/365509889/debate-should-physician-assisted-suicide-be-legal?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Several states allow doctors, in certain circumstances, to help terminally ill people end their lives. The emotionally charged issue is at the center of the latest \\u0026lt;em\\u0026gt;Intelligence Squared U.S.\\u0026lt;/em\\u0026gt; debate.\",\"content_encoded\":\"\\u003Cp\\u003ESeveral states allow doctors, in certain circumstances, to help terminally ill people end their lives. The emotionally charged issue is at the center of the latest \\u003Cem\\u003EIntelligence Squared U.S.\\u003C/em\\u003E debate.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365509889\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T13:46:00-08:00\",\"guid\":\"http://www.npr.org/2014/11/20/365509889/debate-should-physician-assisted-suicide-be-legal?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"NPR Staff\"}"], ["link", "http://www.npr.org/2014/11/20/365509889/debate-should-physician-assisted-suicide-be-legal?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 21:46:00 UTC +00:00], ["title", "Debate: Should Physician-Assisted Suicide Be Legal?"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/thetwo-way/2014/11/20/365516704/white-house-acknowledges-over-count-of-obamacare-signups?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"White House Acknowledges Over-Counting Obamacare Signups\",\"link\":\"http://www.npr.org/blogs/thetwo-way/2014/11/20/365516704/white-house-acknowledges-over-count-of-obamacare-signups?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The administration said some people who had dental plans separate from their health care coverage were mistakenly counted twice. The GOP says it was a deliberate attempt to inflate the numbers.\",\"content_encoded\":\"\\u003Cp\\u003EThe administration said some people who had dental plans separate from their health care coverage were mistakenly counted twice. The GOP says it was a deliberate attempt to inflate the numbers.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365516704\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T13:40:00-08:00\",\"guid\":\"http://www.npr.org/blogs/thetwo-way/2014/11/20/365516704/white-house-acknowledges-over-count-of-obamacare-signups?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Scott Neuman\"}"], ["link", "http://www.npr.org/blogs/thetwo-way/2014/11/20/365516704/white-house-acknowledges-over-count-of-obamacare-signups?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 21:40:00 UTC +00:00], ["title", "White House Acknowledges Over-Counting Obamacare Signups"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/itsallpolitics/2014/11/20/365507207/7-questions-about-the-presidents-immigration-plan-answered?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"7 Questions About The President's Immigration Plan Answered\",\"link\":\"http://www.npr.org/blogs/itsallpolitics/2014/11/20/365507207/7-questions-about-the-presidents-immigration-plan-answered?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The president's executive action will grant temporary relief to some of the nearly 12 million immigrants who are living in the United States illegally. Here's what you should know.\",\"content_encoded\":\"\\u003Cp\\u003EThe president's executive action will grant temporary relief to some of the nearly 12 million immigrants who are living in the United States illegally. Here's what you should know.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365507207\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T13:29:00-08:00\",\"guid\":\"http://www.npr.org/blogs/itsallpolitics/2014/11/20/365507207/7-questions-about-the-presidents-immigration-plan-answered?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Scott Horsley\"}"], ["link", "http://www.npr.org/blogs/itsallpolitics/2014/11/20/365507207/7-questions-about-the-presidents-immigration-plan-answered?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 21:29:00 UTC +00:00], ["title", "7 Questions About The President's Immigration Plan Answered"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/money/2014/11/20/364984303/how-to-catch-a-cattle-thief?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"How To Catch A Cattle Thief\",\"link\":\"http://www.npr.org/blogs/money/2014/11/20/364984303/how-to-catch-a-cattle-thief?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Cattle theft has been making a major comeback. A drought in the West has meant higher beef prices, making cattle an attractive target for thieves.\",\"content_encoded\":\"\\u003Cp\\u003ECattle theft has been making a major comeback. A drought in the West has meant higher beef prices, making cattle an attractive target for thieves.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=364984303\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T13:24:00-08:00\",\"guid\":\"http://www.npr.org/blogs/money/2014/11/20/364984303/how-to-catch-a-cattle-thief?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Stacey Vanek Smith\"}"], ["link", "http://www.npr.org/blogs/money/2014/11/20/364984303/how-to-catch-a-cattle-thief?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 21:24:00 UTC +00:00], ["title", "How To Catch A Cattle Thief"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/ed/2014/11/20/364563452/why-working-with-young-children-is-still-a-dead-end-job?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Why Working With Young Children Is (Still) A Dead-End Job\",\"link\":\"http://www.npr.org/blogs/ed/2014/11/20/364563452/why-working-with-young-children-is-still-a-dead-end-job?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Twenty-five years after a landmark report, a follow-up study finds childcare workers still earning about the same as fast food workers.\",\"content_encoded\":\"\\u003Cp\\u003ETwenty-five years after a landmark report, a follow-up study finds childcare workers still earning about the same as fast food workers.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=364563452\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T13:08:19-08:00\",\"guid\":\"http://www.npr.org/blogs/ed/2014/11/20/364563452/why-working-with-young-children-is-still-a-dead-end-job?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Anya Kamenetz\"}"], ["link", "http://www.npr.org/blogs/ed/2014/11/20/364563452/why-working-with-young-children-is-still-a-dead-end-job?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 21:08:19 UTC +00:00], ["title", "Why Working With Young Children Is (Still) A Dead-End Job"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/health/2014/11/20/365279289/what-diabetes-costs-you-even-if-you-dont-have-the-disease?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"What Diabetes Costs You, Even If You Don't Have The Disease\",\"link\":\"http://www.npr.org/blogs/health/2014/11/20/365279289/what-diabetes-costs-you-even-if-you-dont-have-the-disease?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Diabetes costs the United States $322 billion a year, or $1,000 for each American. That's 48 percent more than it was just five years ago.\",\"content_encoded\":\"\\u003Cp\\u003EDiabetes costs the United States $322 billion a year, or $1,000 for each American. That's 48 percent more than it was just five years ago.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365279289\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T12:51:29-08:00\",\"guid\":\"http://www.npr.org/blogs/health/2014/11/20/365279289/what-diabetes-costs-you-even-if-you-dont-have-the-disease?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Nancy Shute\"}"], ["link", "http://www.npr.org/blogs/health/2014/11/20/365279289/what-diabetes-costs-you-even-if-you-dont-have-the-disease?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 20:51:29 UTC +00:00], ["title", "What Diabetes Costs You, Even If You Don't Have The Disease"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/thetwo-way/2014/11/20/365473750/keep-your-head-up-text-neck-can-take-a-toll-on-the-spine?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Keep Your Head Up: 'Text Neck' Takes A Toll On The Spine\",\"link\":\"http://www.npr.org/blogs/thetwo-way/2014/11/20/365473750/keep-your-head-up-text-neck-can-take-a-toll-on-the-spine?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Newly published research finds that common texting posture can put as much as 60 pounds of force on the cervical spine.\",\"content_encoded\":\"\\u003Cp\\u003ENewly published research finds that common texting posture can put as much as 60 pounds of force on the cervical spine.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365473750\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T12:28:00-08:00\",\"guid\":\"http://www.npr.org/blogs/thetwo-way/2014/11/20/365473750/keep-your-head-up-text-neck-can-take-a-toll-on-the-spine?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Laura Sullivan\"}"], ["link", "http://www.npr.org/blogs/thetwo-way/2014/11/20/365473750/keep-your-head-up-text-neck-can-take-a-toll-on-the-spine?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 20:28:00 UTC +00:00], ["title", "Keep Your Head Up: 'Text Neck' Takes A Toll On The Spine"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/blogs/goatsandsoda/2014/11/20/365480337/indian-shopkeepers-greet-wal-mart-with-protests?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Indian Shopkeepers Greet Wal-Mart's Expansion Plans With Protests\",\"link\":\"http://www.npr.org/blogs/goatsandsoda/2014/11/20/365480337/indian-shopkeepers-greet-wal-mart-with-protests?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"\\\"Wal-Mart, come to your senses!\\\" the protesters shouted. These vendors and hawkers are not happy that the retail giant plans to open 50 more stores.\",\"content_encoded\":\"\\u003Cp\\u003E\\\"Wal-Mart, come to your senses!\\\" the protesters shouted. These vendors and hawkers are not happy that the retail giant plans to open 50 more stores.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365480337\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T11:53:00-08:00\",\"guid\":\"http://www.npr.org/blogs/goatsandsoda/2014/11/20/365480337/indian-shopkeepers-greet-wal-mart-with-protests?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Rhitu Chatterjee\"}"], ["link", "http://www.npr.org/blogs/goatsandsoda/2014/11/20/365480337/indian-shopkeepers-greet-wal-mart-with-protests?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 19:53:00 UTC +00:00], ["title", "Indian Shopkeepers Greet Wal-Mart's Expansion Plans With Protests"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/2014/11/20/365474273/the-cia-wants-to-delete-old-email-critics-say-not-so-fast?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"The CIA Wants To Delete Old Email; Critics Say 'Not So Fast'\",\"link\":\"http://www.npr.org/2014/11/20/365474273/the-cia-wants-to-delete-old-email-critics-say-not-so-fast?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The CIA plan calls for deleting the email of almost all employees after they leave the agency. But opponents say this would erase too many important documents. The example they cite: Edward Snowden.\",\"content_encoded\":\"\\u003Cp\\u003EThe CIA plan calls for deleting the email of almost all employees after they leave the agency. But opponents say this would erase too many important documents. The example they cite: Edward Snowden.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=365474273\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2014-11-20T11:29:00-08:00\",\"guid\":\"http://www.npr.org/2014/11/20/365474273/the-cia-wants-to-delete-old-email-critics-say-not-so-fast?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"David Welna\"}"], ["link", "http://www.npr.org/2014/11/20/365474273/the-cia-wants-to-delete-old-email-critics-say-not-so-fast?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Thu, 20 Nov 2014 19:29:00 UTC +00:00], ["title", "The CIA Wants To Delete Old Email; Critics Say 'Not So Fast'"], ["updated_at", Thu, 20 Nov 2014 23:02:32 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (0.6ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 3]]
+Completed 200 OK in 203ms (Views: 189.4ms | ActiveRecord: 12.7ms)

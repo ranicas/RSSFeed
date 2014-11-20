@@ -6,5 +6,16 @@ NewsReader.Models.Feed = Backbone.Model.extend({
     };
     
     return this._entries;
+  },
+  parse: function (resp) {
+
+    if (resp.latest_entries) {
+      debugger
+      this.entries().set(resp.latest_entries, { parse: true });
+      delete resp.latest_entries;
+    }
+
+    
+    return resp;
   }
 });
