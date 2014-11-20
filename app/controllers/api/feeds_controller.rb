@@ -1,6 +1,7 @@
 class Api::FeedsController < ApplicationController
   def index
-    render :json => Feed.all
+    @feeds = Feed.all
+    render :json => @feeds
   end
 
   def show
