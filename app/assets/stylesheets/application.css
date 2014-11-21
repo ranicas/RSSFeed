@@ -13,36 +13,15 @@
  */
 
 * {
-  padding: 0px;
-  margin: 0px;
-}
-body {
   padding: 0;
   margin: 0;
-}
-
-div {
-  padding: 0;
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style-type: none;
+  border: 0;
 }
 
 div.image-wrapper {
-  /*display: inline-block;*/
   float: left;
   margin: 0px;
-  
-/*  width: 500px;
-  height: 300px;*/
-
+  margin-top: -6px;
 }
 
 div#content {
@@ -52,18 +31,15 @@ div#content {
 }
 
 div#odd {
+  margin-top: 10px;
   float: left;
   width: 500px;
 }
 
 div#even {
+  margin-top: 10px;
   float: left;
   width: 500px;
 
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
