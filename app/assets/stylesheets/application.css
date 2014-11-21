@@ -11,3 +11,59 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+div.image-wrapper {
+  /*display: inline-block;*/
+  float: left;
+  margin: 0px;
+  
+/*  width: 500px;
+  height: 300px;*/
+
+}
+
+div#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}
+
+div#odd {
+  float: left;
+  width: 500px;
+}
+
+div#even {
+  float: left;
+  width: 500px;
+
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

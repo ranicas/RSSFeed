@@ -1,12 +1,45 @@
 <h3><%= feed.escape('title') %></h3>
-<ul>
+<!-- <button id="refresh">Refresh</button> -->
+<!-- <ul>
   <% feed.entries().each(function(entry) { %>
       <li>
         <% if (feed.id === 5) { %>
-          <img src="<%= entry.img %>">
+          <div class="image-wrapper">
+            <a href="<%= entry.img %>"><img src="<%= entry.img %>"></a>
+          </div>
         <% } else { %>
             <%= entry.escape('title') %>
         <% } %>
       </li>
   <% }) %>
-</ul>
+</ul> -->
+
+<% if (feed.id === 5) { %>
+  <div id="odd">
+    <% feed.entries().each(function(entry) { %>
+      <% if (entry.id % 2 !== 0) { %>
+        <div class="image-wrapper">
+          <a href="<%= entry.img %>"><img src="<%= entry.img %>"></a>
+        </div>
+      <% } %>
+    <% }) %>
+  </div>
+  
+  <div id="even">
+    <% feed.entries().each(function(entry) { %>
+      <% if (entry.id % 2 === 0) { %>
+        <div class="image-wrapper">
+          <a href="<%= entry.img %>"><img src="<%= entry.img %>"></a>
+        </div>
+      <% } %>
+    <% }) %>
+  </div>
+<% } else { %>
+  <ul>
+    <% feed.entries().each(function(entry) { %>
+      <li>
+        <%= entry.escape('title') %>
+      </li>
+    <% }) %>
+  </ul>
+<% }%> 
