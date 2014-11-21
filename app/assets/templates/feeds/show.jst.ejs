@@ -1,18 +1,5 @@
 <h3><%= feed.escape('title') %></h3>
 <!-- <button id="refresh">Refresh</button> -->
-<!-- <ul>
-  <% feed.entries().each(function(entry) { %>
-      <li>
-        <% if (feed.id === 5) { %>
-          <div class="image-wrapper">
-            <a href="<%= entry.img %>"><img src="<%= entry.img %>"></a>
-          </div>
-        <% } else { %>
-            <%= entry.escape('title') %>
-        <% } %>
-      </li>
-  <% }) %>
-</ul> -->
 
 <% if (feed.id === 5) { %>
   <div id="odd">
