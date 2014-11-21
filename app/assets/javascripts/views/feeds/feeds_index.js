@@ -10,5 +10,4 @@ NewsReader.Views.FeedsIndex = Backbone.View.extend({
     this.$el.html(content);
     return this;
   }
-  
 });

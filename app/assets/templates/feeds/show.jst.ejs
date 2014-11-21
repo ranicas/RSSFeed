@@ -1,0 +1,12 @@
+<h3><%= feed.escape('title') %></h3>
+<ul>
+  <% feed.entries().each(function(entry) { %>
+      <li>
+        <% if (feed.id === 5) { %>
+          <img src="<%= entry.img %>">
+        <% } else { %>
+            <%= entry.escape('title') %>
+        <% } %>
+      </li>
+  <% }) %>
+</ul>
